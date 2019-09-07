@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+    <test_table id="100" text="text" is_active="0"/>
+    <test_table id="101" text="text" is_active="0"/>
+    <test_table2 id="101" />
+</dataset>
