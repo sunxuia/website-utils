@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>net.sunxu.website</groupId>
-            <artifactId>website-common-utils</artifactId>
+            <artifactId>website-help-utils</artifactId>
             <version>${project.version}</version>
         </dependency>
 

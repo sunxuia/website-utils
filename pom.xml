@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>website-common-utils</module>
+        <module>website-help-utils</module>
         <module>website-help-webutils</module>
         <module>website-test-utils</module>
         <module>website-test-dbunit</module>
