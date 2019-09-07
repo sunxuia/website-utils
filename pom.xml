@@ -21,9 +21,9 @@
     </parent>
 
     <scm>
-        <url>https://github.com/sunxuia/website-help-utils</url>
-        <connection>scm:git:git@github.com:sunxuia/website-help-utils.git</connection>
-        <developerConnection>scm:git:giipt@github.com:sunxuia/website-help-utils.git</developerConnection>
+        <url>https://github.com/sunxuia/website-utils</url>
+        <connection>scm:git:git@github.com:sunxuia/website-utils.git</connection>
+        <developerConnection>scm:git:giipt@github.com:sunxuia/website-utils.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
