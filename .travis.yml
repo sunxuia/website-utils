@@ -7,7 +7,7 @@ env:
     - secure:
     - secure: EMJQSP/DStAuVYFP7mxIXT67Ze07JzTHq1Lg5MbKXHM4b3vXEKyw3sPN1BC+LjTqoV9LpdtopjJKUzN7fHHFBXt3wnBIZ9rErb9tI1gJHSRaIyoh0xuhWPgIc071VdkZKFL7Qz/6j5dfPuWclb7Gi9wA+RnSxRi1Cgf9Ujyky8LKA1nSZsjaHZfcQJ5LWx6q8nPSp8I0hIJ/EnPXUpnx3qXCOOQRbgS25bPdSY/tNOR3/MUn6JuY32E8lABt1Tc2StIJfs08Onu5LprMP7tuCw8scCk/u2ugNvJhsUpuioSqB5fhrVg07CjAFrbUV4Sx7ubEu9aUPp1NEJbZqGkjLKez8T2wGNS4PRwgH1fKnF19v40vglOUmoq2iUqBX/+0L8i4spmV6ihEfoe+zu4SXB8iFO2gxf666WkrOcTDTen+Df+xWQGPB4P1lAbvEPhL7ajLzE42sPtMlyRm1RcfDgb6rQ0gxdcaarPKjzTVr8Y3v9j4B1aPW/ZBJoeJtdMeNQUojuGjKOpKjSZKDEuaJanuPfx5Dx95FMb/efhZbebRtoT7VVd/N1empSYjYNK5E6lkftj5ozGyrJn9P/xv7XgYYwaA9Btg1NShQUecbeQQBbT5HS21qHqq+AiiIRTtlYN4SWivCtb8WBrjreB3oiGzyXWVrufbQIhIIpP0gK0=
 addons:
-  host:
+  hosts:
     - mysql-server
   sonarcloud:
     organization: sunxuia
@@ -17,8 +17,7 @@ before_script:
   - wget https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb
   - sudo dpkg -i mysql-apt-config_0.8.13-1_all.deb
   - sudo apt-get update -q
-  - sudo apt-get install -q -y --allow-unauthenticated -o Dpkg::Options::=--force-confnew
-    mysql-server
+  - sudo apt-get install -q -y --allow-unauthenticated -o Dpkg::Options::=--force-confnew mysql-server
   - sudo systemctl restart mysql
   - sudo mysql_upgrade
   - echo 'mysql version is ' `mysql --version`
