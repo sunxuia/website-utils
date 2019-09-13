@@ -50,8 +50,13 @@ public class ThreadPoolHelpUtils {
         factory.setSingleThread(true);
         return new ThreadPoolExecutor(1, 1,
                 0, TimeUnit.SECONDS,
-                new LinkedBlockingDeque<>(),
+                new LinkedBlockingDeque<>(2048),
                 factory);
+    }
+
+    public static ThreadPoolExecutor newFixedThreadExecutor(String threadName, int count) {
+        return new ThreadPoolExecutor(count, count, 0, TimeUnit.SECONDS,
+                new LinkedBlockingDeque<>(2048), new CustomThreadFactory(threadName));
     }
 
 }

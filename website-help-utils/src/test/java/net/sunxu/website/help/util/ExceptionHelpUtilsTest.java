@@ -1,16 +1,16 @@
 package net.sunxu.website.help.util;
 
-import static net.sunxu.website.help.util.ExceptionUtils.wrapException;
+import static net.sunxu.website.help.util.ExceptionHelpUtils.wrapException;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-import net.sunxu.website.help.util.ExceptionUtils.WrappedException;
+import net.sunxu.website.help.util.ExceptionHelpUtils.WrappedException;
 import org.hamcrest.core.IsInstanceOf;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-public class ExceptionUtilsTest {
+public class ExceptionHelpUtilsTest {
 
     @Rule
     public ExpectedException exceptionRule = ExpectedException.none();
@@ -18,7 +18,6 @@ public class ExceptionUtilsTest {
     @Test
     public void testWrapException() {
         assertEquals("a", wrapException(() -> "a"));
-        assertNull(wrapException(null));
 
         exceptionRule.expect(WrappedException.class);
         exceptionRule.expectCause(IsInstanceOf.instanceOf(NullPointerException.class));
