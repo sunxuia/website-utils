@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cp .travis.settings.xml $HOME/.m2/settings.xml
 mvn clean test -q
 
 if [[ $TRAVIS_PULL_REQUEST == "false" || $TRAVIS_PULL_REQUEST_SLUG == $TRAVIS_REPO_SLUG ]]; then
@@ -10,5 +11,5 @@ fi
 
 if [[ $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_BRANCH == "master" ]]; then
     echo "deploy jars"
-    mvn deploy -Dskip.deploy-docker=true -Dgithub.global.oauth2Token=$github_token -q
+    mvn clean deploy -Dskip.deploy-docker=true -q
 fi
